@@ -32,7 +32,7 @@ const questions = [
             { text: "'This is a comment", correct: false },
             { text: "//This is a comment", correct: true },
             { text: "<!--This is a comment-->", correct: false },
-            { text: "/*This is a comment*/", correct: true }
+            { text: "/*This is a comment/", correct: false }
         ]
     },
     {
