@@ -12,8 +12,9 @@ body {
     background-color: aliceblue;
     border-radius: 10px;
     padding: 20px;
-    width: 40%;
+    width: 70%;
 }
+
 
 .questionsContanier{
     display: flex;
@@ -23,17 +24,20 @@ body {
     justify-content: center;
      
 }
+#score{
+    margin-left: 80%;
+    font-weight: bolder;
+}
 
 .question{
     color: black;
     font-size: large;
-    
     margin: 0.5rem;
 }
 
 .answersBtn{
     width: 80%;
-    height: 3rem;
+    height: 6vh;
     margin: 0.5rem;
     border-radius: 5px;
     text-align: left;
@@ -47,11 +51,11 @@ body {
 }
 
 .nextBtn {
-    margin: 2rem auto; 
+    margin: auto; 
     height: 2.5rem;
-    width: 12rem;
+    width: 20%;
     background: linear-gradient(120deg, rgba(0, 0, 255, 0.337), rgba(255, 0, 0, 0.567));
-    font-size: larger;
+    font-size: 90%;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
