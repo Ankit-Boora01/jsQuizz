@@ -24,9 +24,20 @@ body {
     justify-content: center;
      
 }
-#score{
-    margin-left: 80%;
+
+
+#seconds{
     font-weight: bolder;
+    margin-left: 80%;
+    color: green;
+    font-size: larger;
+    
+}
+
+#score{ 
+    font-weight: bolder;
+    font-size: x-large;
+    color: brown;
 }
 
 .question{
@@ -37,13 +48,13 @@ body {
 
 .answersBtn{
     width: 80%;
-    height: 6vh;
     margin: 0.5rem;
     border-radius: 5px;
     text-align: left;
     cursor: pointer;
     color: black;
     font-size: 900;
+    padding: 10px 0px 10px 10px;
 }
 
 .answersBtn:hover{
@@ -52,6 +63,8 @@ body {
 
 .nextBtn {
     margin: auto; 
+    margin-top: 3%;
+    margin-bottom: 2%;
     height: 2.5rem;
     width: 20%;
     background: linear-gradient(120deg, rgba(0, 0, 255, 0.337), rgba(255, 0, 0, 0.567));

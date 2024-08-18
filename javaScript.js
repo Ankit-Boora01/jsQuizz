@@ -11,36 +11,37 @@ const questions = [
     {
         question: "Explain the difference between '==' and '===' in JavaScript.",
         answers: [
-            { text: "'==' checks for value equality with type coercion, while '===' checks for both value and type equality without type coercion.", correct: true },
             { text: "'===' checks for value equality with type coercion, while '==' checks for both value and type equality without type coercion.", correct: false },
             { text: "'==' is used for comparing objects, while '===' is used for comparing primitive values.", correct: false },
+            { text: "'==' checks for value equality with type coercion, while '===' checks for both value and type equality without type coercion.", correct: true },
             { text: "They are both the same and can be used interchangeably.", correct: false }
         ]
     },
     {
         question: "What is a closure in JavaScript, and how does it work?",
         answers: [
+            { text: "A closure is a function that is executed only once and then destroyed.", correct: false },
             { text: "A closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.", correct: true },
             { text: "A closure is a function that is used to create private variables in JavaScript.", correct: false },
-            { text: "A closure is a function that is executed only once and then destroyed.", correct: false },
             { text: "A closure is a method in JavaScript used to bind the 'this' keyword.", correct: false }
         ]
     },
     {
         question: "How does JavaScript handle asynchronous code?",
         answers: [
+            { text: "JavaScript handles asynchronous code using recursion.", correct: false },
             { text: "JavaScript uses the event loop to manage asynchronous operations such as callbacks, promises, and async/await.", correct: true },
             { text: "JavaScript is single-threaded and cannot handle asynchronous code.", correct: false },
-            { text: "Asynchronous code is handled by creating new threads in JavaScript.", correct: false },
-            { text: "JavaScript handles asynchronous code using recursion.", correct: false }
+            { text: "Asynchronous code is handled by creating new threads in JavaScript.", correct: false }
         ]
     },
     {
         question: "How does the 'this' keyword behave in different contexts?",
         answers: [
-            { text: "'this' refers to the object it belongs to, but its value can change depending on how a function is called.", correct: true },
+           
             { text: "'this' always refers to the global object regardless of where it is used.", correct: false },
             { text: "'this' is always bound to the function in which it is used.", correct: false },
+            { text: "'this' refers to the object it belongs to, but its value can change depending on how a function is called.", correct: true },
             { text: "'this' cannot be used in strict mode.", correct: false }
         ]
     },
@@ -56,17 +57,17 @@ const questions = [
     {
         question: "What are JavaScript prototypes?",
         answers: [
-            { text: "Prototypes are objects from which other objects inherit properties and methods.", correct: true },
             { text: "Prototypes are blueprints used to create objects in JavaScript.", correct: false },
             { text: "Prototypes are special functions used to optimize JavaScript code.", correct: false },
-            { text: "Prototypes are data types used to define the structure of an object.", correct: false }
+            { text: "Prototypes are data types used to define the structure of an object.", correct: false },
+            { text: "Prototypes are objects from which other objects inherit properties and methods.", correct: true }
         ]
     },
     {
         question: "What is the difference between 'let', 'const', and 'var'?",
         answers: [
-            { text: "'var' is function-scoped, while 'let' and 'const' are block-scoped. 'const' is used for variables that should not be reassigned.", correct: true },
             { text: "'let' and 'var' are block-scoped, while 'const' is function-scoped.", correct: false },
+            { text: "'var' is function-scoped, while 'let' and 'const' are block-scoped. 'const' is used for variables that should not be reassigned.", correct: true },
             { text: "'const' is used for variables that are constant across all scopes.", correct: false },
             { text: "'let' and 'const' are used for global variables, while 'var' is used for local variables.", correct: false }
         ]
@@ -74,17 +75,17 @@ const questions = [
     {
         question: "How does JavaScript handle object inheritance?",
         answers: [
-            { text: "JavaScript uses prototypes to handle inheritance, where objects can inherit properties and methods from another object.", correct: true },
             { text: "JavaScript uses classes and interfaces like other programming languages to handle inheritance.", correct: false },
             { text: "JavaScript does not support inheritance.", correct: false },
-            { text: "JavaScript uses copy-and-paste to handle inheritance.", correct: false }
+            { text: "JavaScript uses copy-and-paste to handle inheritance.", correct: false },
+            { text: "JavaScript uses prototypes to handle inheritance, where objects can inherit properties and methods from another object.", correct: true }
         ]
     },
     {
         question: "What is an immediately-invoked function expression (IIFE) in JavaScript?",
         answers: [
-            { text: "An IIFE is a function that runs as soon as it is defined.", correct: true },
             { text: "An IIFE is a function that runs only after being called multiple times.", correct: false },
+            { text: "An IIFE is a function that runs as soon as it is defined.", correct: true },
             { text: "An IIFE is a function that is never executed.", correct: false },
             { text: "An IIFE is a function that is defined but not executed immediately.", correct: false }
         ]
@@ -101,28 +102,29 @@ const questions = [
     {
         question: "What is currying in JavaScript?",
         answers: [
+            { text: "Currying is a pattern used to flatten nested functions.", correct: false },
             { text: "Currying is a technique where a function is transformed into a sequence of functions, each taking a single argument.", correct: true },
             { text: "Currying is a method used to optimize loops in JavaScript.", correct: false },
-            { text: "Currying is a way to reverse the order of function arguments.", correct: false },
-            { text: "Currying is a pattern used to flatten nested functions.", correct: false }
+            { text: "Currying is a way to reverse the order of function arguments.", correct: false }
         ]
     },
     {
         question: "How do arrow functions differ from regular functions in JavaScript?",
         answers: [
-            { text: "Arrow functions do not have their own 'this' context and are more concise.", correct: true },
             { text: "Arrow functions cannot be used in JavaScript and are just a syntax error.", correct: false },
             { text: "Arrow functions are always asynchronous, while regular functions are synchronous.", correct: false },
+            { text: "Arrow functions do not have their own 'this' context and are more concise.", correct: true },
             { text: "Arrow functions must be declared inside a class, while regular functions do not have this restriction.", correct: false }
         ]
     },
     {
         question: "What is the difference between 'Object.create()' and using constructors to create objects?",
         answers: [
-            { text: "'Object.create()' creates a new object with a specified prototype, while constructors use the 'new' keyword to create objects with inherited properties.", correct: true },
             { text: "'Object.create()' creates singleton objects, while constructors create multiple instances.", correct: false },
             { text: "'Object.create()' is used for prototyping, while constructors are used for creating objects.", correct: false },
-            { text: "There is no difference between them; they are used interchangeably.", correct: false }
+            { text: "There is no difference between them; they are used interchangeably.", correct: false },
+            { text: "'Object.create()' creates a new object with a specified prototype, while constructors use the 'new' keyword to create objects with inherited properties.", correct: true }
+            
         ]
     },
     {
@@ -146,19 +148,19 @@ const questions = [
     {
         question: "What are the differences between 'map', 'forEach', and 'reduce' in JavaScript?",
         answers: [
-            { text: "'map' returns a new array, 'forEach' iterates over elements without returning anything, and 'reduce' accumulates values based on the provided function.", correct: true },
             { text: "'map' and 'reduce' are identical, but 'forEach' is slower.", correct: false },
             { text: "'forEach' and 'reduce' are synchronous, while 'map' is asynchronous.", correct: false },
+            { text: "'map' returns a new array, 'forEach' iterates over elements without returning anything, and 'reduce' accumulates values based on the provided function.", correct: true },
             { text: "'reduce' is used for looping, while 'map' and 'forEach' are used for filtering.", correct: false }
         ]
     },
     {
         question: "What is 'debouncing' and 'throttling' in JavaScript?",
         answers: [
-            { text: "Debouncing ensures that a function is only called once after a delay, while throttling ensures that a function is called at regular intervals.", correct: true },
             { text: "Debouncing and throttling are the same and can be used interchangeably.", correct: false },
             { text: "Debouncing ensures a function is called multiple times after a delay, while throttling calls a function at random intervals.", correct: false },
-            { text: "Debouncing ensures a function is only called once, while throttling prevents a function from being called.", correct: false }
+            { text: "Debouncing ensures a function is only called once, while throttling prevents a function from being called.", correct: false },
+            { text: "Debouncing ensures that a function is only called once after a delay, while throttling ensures that a function is called at regular intervals.", correct: true }
         ]
     },
     {
@@ -173,8 +175,8 @@ const questions = [
     {
         question: "How does the 'async/await' syntax improve readability and handling of asynchronous code?",
         answers: [
-            { text: "'async/await' allows asynchronous code to be written in a synchronous style, making it easier to understand and work with.", correct: true },
             { text: "'async/await' slows down asynchronous code execution.", correct: false },
+            { text: "'async/await' allows asynchronous code to be written in a synchronous style, making it easier to understand and work with.", correct: true },
             { text: "'async/await' is used to write multithreaded code.", correct: false },
             { text: "'async/await' is the only way to handle asynchronous code in JavaScript.", correct: false }
         ]
@@ -182,10 +184,10 @@ const questions = [
     {
         question: "What is the difference between 'shallow copy' and 'deep copy' in JavaScript?",
         answers: [
-            { text: "A shallow copy copies only the first level of the object, while a deep copy recursively copies all levels of the object.", correct: true },
             { text: "A shallow copy duplicates all levels of an object, while a deep copy copies only the first level.", correct: false },
             { text: "A shallow copy only copies object references, while a deep copy copies object properties.", correct: false },
-            { text: "There is no difference between shallow and deep copies in JavaScript.", correct: false }
+            { text: "There is no difference between shallow and deep copies in JavaScript.", correct: false },
+            { text: "A shallow copy copies only the first level of the object, while a deep copy recursively copies all levels of the object.", correct: true }
         ]
     },
     {
@@ -200,9 +202,9 @@ const questions = [
     {
         question: "What is the difference between 'prototype' and '__proto__' in JavaScript?",
         answers: [
-            { text: "'prototype' is a property of a function object, while '__proto__' is a property of an object that points to its prototype.", correct: true },
             { text: "'prototype' and '__proto__' are the same and can be used interchangeably.", correct: false },
             { text: "'prototype' is used for creating functions, while '__proto__' is used for creating objects.", correct: false },
+            { text: "'prototype' is a property of a function object, while '__proto__' is a property of an object that points to its prototype.", correct: true },
             { text: "'prototype' is a method, while '__proto__' is a property of all objects.", correct: false }
         ]
     },
@@ -218,8 +220,8 @@ const questions = [
     {
         question: "What is the difference between synchronous and asynchronous code in JavaScript?",
         answers: [
-            { text: "Synchronous code executes sequentially, blocking further execution until it completes, while asynchronous code executes without blocking further execution.", correct: true },
             { text: "Synchronous code is executed in parallel, while asynchronous code is executed in sequence.", correct: false },
+            { text: "Synchronous code executes sequentially, blocking further execution until it completes, while asynchronous code executes without blocking further execution.", correct: true },
             { text: "Synchronous code is used only for I/O operations, while asynchronous code is used for calculations.", correct: false },
             { text: "There is no difference between synchronous and asynchronous code in JavaScript.", correct: false }
         ]
@@ -227,10 +229,10 @@ const questions = [
     {
         question: "How do the 'spread' and 'rest' operators work in JavaScript?",
         answers: [
-            { text: "The spread operator expands elements, while the rest operator condenses multiple elements into a single array.", correct: true },
             { text: "The spread operator is used for destructuring, while the rest operator is used for copying.", correct: false },
             { text: "The spread operator is used for copying objects, while the rest operator is used for concatenating arrays.", correct: false },
-            { text: "The spread and rest operators are the same and can be used interchangeably.", correct: false }
+            { text: "The spread and rest operators are the same and can be used interchangeably.", correct: false },
+            { text: "The spread operator expands elements, while the rest operator condenses multiple elements into a single array.", correct: true },
         ]
     },
     {
@@ -254,10 +256,10 @@ const questions = [
     {
         question: "What is the 'temporal dead zone' in JavaScript?",
         answers: [
-            { text: "The temporal dead zone is the time between entering the scope and the variable being declared, where accessing the variable results in a reference error.", correct: true },
             { text: "The temporal dead zone is the time when variables are not initialized to 'undefined'.", correct: false },
             { text: "The temporal dead zone refers to the time delay in asynchronous operations.", correct: false },
-            { text: "The temporal dead zone is a period when the browser is processing JavaScript code.", correct: false }
+            { text: "The temporal dead zone is a period when the browser is processing JavaScript code.", correct: false },
+            { text: "The temporal dead zone is the time between entering the scope and the variable being declared, where accessing the variable results in a reference error.", correct: true }
         ]
     },
     {
@@ -272,8 +274,8 @@ const questions = [
     {
         question: "How does JavaScript handle event delegation?",
         answers: [
-            { text: "Event delegation is a technique where a single event listener is added to a parent element to manage events for multiple child elements.", correct: true },
             { text: "Event delegation is when events are passed from one element to another.", correct: false },
+            { text: "Event delegation is a technique where a single event listener is added to a parent element to manage events for multiple child elements.", correct: true },
             { text: "Event delegation refers to the process of assigning multiple event listeners to the same element.", correct: false },
             { text: "Event delegation is when events are handled asynchronously in JavaScript.", correct: false }
         ]
@@ -281,9 +283,9 @@ const questions = [
     {
         question: "What is the difference between a call stack and a task queue in JavaScript?",
         answers: [
-            { text: "The call stack handles function execution, while the task queue handles asynchronous operations waiting to be executed.", correct: true },
             { text: "The call stack and task queue are the same and can be used interchangeably.", correct: false },
             { text: "The task queue handles synchronous operations, while the call stack handles asynchronous operations.", correct: false },
+            { text: "The call stack handles function execution, while the task queue handles asynchronous operations waiting to be executed.", correct: true },
             { text: "The call stack is used for handling I/O operations, while the task queue is used for handling functions.", correct: false }
         ]
     },
@@ -299,17 +301,17 @@ const questions = [
     {
         question: "What is the difference between 'call', 'apply', and 'bind' in JavaScript?",
         answers: [
-            { text: "'call' and 'apply' invoke a function immediately with a specified 'this' context, while 'bind' returns a new function with 'this' bound to the specified context.", correct: true },
             { text: "'call' and 'bind' are identical, but 'apply' is different.", correct: false },
             { text: "'apply' and 'bind' are identical, but 'call' is different.", correct: false },
-            { text: "There is no difference between 'call', 'apply', and 'bind'; they can be used interchangeably.", correct: false }
+            { text: "There is no difference between 'call', 'apply', and 'bind'; they can be used interchangeably.", correct: false },
+            { text: "'call' and 'apply' invoke a function immediately with a specified 'this' context, while 'bind' returns a new function with 'this' bound to the specified context.", correct: true },
         ]
     },
     {
         question: "How does JavaScript's 'Promise.all' work?",
         answers: [
-            { text: "'Promise.all' takes an array of promises and returns a single promise that resolves when all of the promises have resolved.", correct: true },
             { text: "'Promise.all' takes a single promise and converts it into multiple promises.", correct: false },
+            { text: "'Promise.all' takes an array of promises and returns a single promise that resolves when all of the promises have resolved.", correct: true },
             { text: "'Promise.all' is used to reject all promises in an array if any one of them fails.", correct: false },
             { text: "'Promise.all' does not exist in JavaScript.", correct: false }
         ]
@@ -317,10 +319,10 @@ const questions = [
     {
         question: "What are generators in JavaScript, and how do they work?",
         answers: [
-            { text: "Generators are functions that can pause execution and yield control back to the caller, and later be resumed from where they left off.", correct: true },
             { text: "Generators are functions that run only once and then are destroyed.", correct: false },
             { text: "Generators are used to create single-threaded applications in JavaScript.", correct: false },
-            { text: "Generators are a new type of loop in JavaScript.", correct: false }
+            { text: "Generators are a new type of loop in JavaScript.", correct: false },
+            { text: "Generators are functions that can pause execution and yield control back to the caller, and later be resumed from where they left off.", correct: true }
         ]
     },
     {
@@ -344,8 +346,8 @@ const questions = [
     {
         question: "What is the difference between 'for...of' and 'for...in' loops?",
         answers: [
-            { text: "'for...of' iterates over the values of an iterable object, while 'for...in' iterates over the keys of an object.", correct: true },
             { text: "'for...in' iterates over the values of an array, while 'for...of' iterates over the properties of an object.", correct: false },
+            { text: "'for...of' iterates over the values of an iterable object, while 'for...in' iterates over the keys of an object.", correct: true },
             { text: "'for...of' and 'for...in' are identical and can be used interchangeably.", correct: false },
             { text: "'for...of' is used for looping over arrays, while 'for...in' is used for looping over strings.", correct: false }
         ]
@@ -353,26 +355,26 @@ const questions = [
     {
         question: "What is 'memoization' in JavaScript?",
         answers: [
-            { text: "Memoization is a technique used to store the results of expensive function calls and return the cached result when the same inputs occur again.", correct: true },
             { text: "Memoization is a way to store all variables in memory.", correct: false },
             { text: "Memoization is used to optimize loops by caching their results.", correct: false },
+            { text: "Memoization is a technique used to store the results of expensive function calls and return the cached result when the same inputs occur again.", correct: true },
             { text: "Memoization is the process of converting a function into a string.", correct: false }
         ]
     },
     {
         question: "What is the purpose of 'Symbol' in JavaScript?",
         answers: [
-            { text: "Symbols are unique and immutable data types used to create hidden properties in objects.", correct: true },
             { text: "Symbols are used to convert strings into numbers.", correct: false },
             { text: "Symbols are used to create arrays.", correct: false },
-            { text: "Symbols are just another name for functions in JavaScript.", correct: false }
+            { text: "Symbols are just another name for functions in JavaScript.", correct: false },
+            { text: "Symbols are unique and immutable data types used to create hidden properties in objects.", correct: true }
         ]
     },
     {
         question: "How does JavaScript handle type coercion?",
         answers: [
-            { text: "JavaScript automatically converts data types when performing operations between different types, sometimes leading to unexpected results.", correct: true },
             { text: "JavaScript does not perform type coercion; all types must be explicitly converted.", correct: false },
+            { text: "JavaScript automatically converts data types when performing operations between different types, sometimes leading to unexpected results.", correct: true },
             { text: "Type coercion is only performed on objects in JavaScript.", correct: false },
             { text: "JavaScript only performs type coercion when using the '==' operator.", correct: false }
         ]
@@ -398,8 +400,8 @@ const questions = [
     {
         question: "What is the purpose of 'JSON.stringify()' and 'JSON.parse()'?",
         answers: [
-            { text: "'JSON.stringify()' converts a JavaScript object into a JSON string, while 'JSON.parse()' converts a JSON string back into a JavaScript object.", correct: true },
             { text: "'JSON.stringify()' is used to sort objects, while 'JSON.parse()' is used to filter arrays.", correct: false },
+            { text: "'JSON.stringify()' converts a JavaScript object into a JSON string, while 'JSON.parse()' converts a JSON string back into a JavaScript object.", correct: true },
             { text: "'JSON.stringify()' is used to convert arrays into strings, while 'JSON.parse()' is used to convert strings into numbers.", correct: false },
             { text: "'JSON.stringify()' and 'JSON.parse()' are identical and can be used interchangeably.", correct: false }
         ]
@@ -411,8 +413,11 @@ const questionDisplay = document.querySelector(".question");
 const answerButtons = document.querySelectorAll(".answersBtn");
 const nextBtn = document.querySelector(".nextBtn");
 const scoreDisplay = document.querySelector("#score");
+const seconds = document.querySelector("#seconds");
 let questionIndex = 0;
 let score = 0;
+let intervalId;
+let timeoutId;
 
 function showQuestion() {
     let currentQuestion = questions[questionIndex];
@@ -426,6 +431,9 @@ function showQuestion() {
         button.style.backgroundColor = "";
     });
     scoreDisplay.textContent = `Score: ${score} / ${questions.length}`;
+    
+    // Reset the timer each time a question is displayed
+    resetTimer();
 }
 
 function selectAnswer(answer, button) {
@@ -444,10 +452,35 @@ function selectAnswer(answer, button) {
     });
 }
 
-nextBtn.addEventListener("click", handleNextButton);
+function resetTimer() {
+    if (intervalId) clearInterval(intervalId);
+    if (timeoutId) clearTimeout(timeoutId);
+
+    secCounts = 29;
+    seconds.style.color = 'green';
+    seconds.textContent = "00:29"; 
+
+    intervalId = setInterval(() => {
+        secCounts--;
+        if (secCounts >= 0) {
+            seconds.textContent = "00:" + (secCounts > 9 ? secCounts : "0" + secCounts);
+        }
+        if (secCounts <= 5) {
+            seconds.style.color = 'red';  
+        } 
+
+        if (secCounts <= 0) {
+            clearInterval(intervalId);
+            handleNextButton();
+        }
+    }, 1000);
+
+    timeoutId = setTimeout(() => handleNextButton(), 30000);
+}
 
 function handleNextButton() {
     questionIndex++;
+    
     if (questionIndex < questions.length) {
         showQuestion();
     } else {
@@ -455,7 +488,14 @@ function handleNextButton() {
     }
 }
 
+nextBtn.addEventListener("click", () => {
+    clearTimeout(timeoutId);
+    clearInterval(intervalId);
+    handleNextButton();
+});
+
 function showResult() {
+    seconds.style.display = 'none';
     questionDisplay.textContent = `Your Score is ${score} out of ${questions.length}!!`;
     answerButtons.forEach(button => button.style.display = "none");
     nextBtn.textContent = "Try Again";
@@ -467,6 +507,7 @@ function showResult() {
 function resetQuiz() {
     questionIndex = 0;
     score = 0;
+    seconds.style.display = 'block';
     answerButtons.forEach(button => {
         button.style.display = "block";
         button.style.backgroundColor = "";
